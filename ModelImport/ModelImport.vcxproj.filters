@@ -24,12 +24,30 @@
     <ClInclude Include="targetver.h">
       <Filter>头文件</Filter>
     </ClInclude>
+    <ClInclude Include="Mesh.hpp">
+      <Filter>源文件</Filter>
+    </ClInclude>
+    <ClInclude Include="shader.hpp">
+      <Filter>源文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Model.hpp">
+      <Filter>源文件</Filter>
+    </ClInclude>
+    <ClInclude Include="camera.hpp">
+      <Filter>源文件</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="stdafx.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
     <ClCompile Include="ModelImport.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="Mesh.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="Model.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
   </ItemGroup>
