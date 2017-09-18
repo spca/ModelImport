@@ -24,8 +24,7 @@ float lastY = SCR_HEIGHT / 2.0f;
 void processInput(GLFWwindow *window);
 void cursorpos_callback(GLFWwindow* window, double xoffset, double yoffset);
 void scroll_callback(GLFWwindow* window, double xoffset, double yoffset);
-unsigned int loadTexture(char const * path);
-int main()
+int main(void)
 {
 	glfwInit();
 	glfwWindowHint(GLFW_CONTEXT_VERSION_MAJOR, 3);
@@ -59,7 +58,7 @@ int main()
 		shader.setMat4("model", model);
 		shader.setMat4("view", view);
 		shader.setMat4("projection", projection);
-		mode
+		
 		glfwSwapBuffers(window);
 		glfwPollEvents();
 

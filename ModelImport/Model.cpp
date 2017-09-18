@@ -1,6 +1,10 @@
 #include "stdafx.h"
 #include "Model.hpp"
+#define STB_IMAGE_IMPLEMENTATION
+
 #include "stb_image.h"
+
+unsigned int loadTexture(char const * path, std::string directory);
 void Model::Draw(Shader shader)
 {
 }
@@ -19,7 +23,7 @@ void Model::loadModel(string path)
 
 void Model::processNode(aiNode * node, const aiScene * scene)
 {
-	for (unsigned int i = 0; i < node->mNumMeshes, ++i)
+	for (unsigned int i = 0; i < node->mNumMeshes;++i)
 	{
 		aiMesh* mesh = scene->mMeshes[node->mMeshes[i]];
 		meshes.push_back(processMesh(mesh,scene));
@@ -123,9 +127,7 @@ unsigned int loadTexture(char const * path ,std::string directory)
 	filename = directory + '/' + filename;
 	unsigned int textureID;
 	glGenTextures(1, &textureID);
-	int widt
-		
-		h, height, nrComponents;
+	int width, height, nrComponents;
 	unsigned char *data = stbi_load(filename.c_str(), &width, &height, &nrComponents, 0);
 	if (data)
 	{
